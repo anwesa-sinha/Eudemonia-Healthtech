@@ -7,3 +7,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function openAbt() {
+  document.getElementById("abt-main").style.width = "250px";
+}
+
+function closeAbt() {
+  document.getElementById("abt-main").style.width = "0";
+}

@@ -28,7 +28,7 @@ nav{
     padding: 5px 0;
 }
 
-nav ul{
+ nav ul{
     flex: 1;
     text-align: right;
     padding-right: 30px;
@@ -38,19 +38,28 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 30px;
-}
+    color: #000;
+  font-weight: bold;
+  font-size: larger;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 5px solid black;
+} */
 
-nav ul li a{
+ nav ul li span{
     color: #000;
     font-weight: bold;
+    font-size: larger;
     text-decoration: none;
     position: relative;
     padding: 10px 20px;
     margin-right: 20px;
-    border: 2px solid black;
-}
+    border: 5px solid black;
+} 
 
-nav ul li a ::after{
+nav ul li span ::after{
     content: '';
     width: 0;
     height: 3px;
@@ -62,20 +71,63 @@ nav ul li a ::after{
     transition: width 0.3s;
 }
 
-nav ul li a :hover::after{
+nav ul li span :hover::after{
     width: 50%;
+} 
+
+.abt-us {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(143, 185, 230);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-left: 10px;
+}
+
+.abt-us a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.abt-us a:hover {
+  color: #c72424;
+}
+
+.abt-us .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 100px;
+  line-height: 100px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .abt-us {padding-top: 15px;}
+  .abt-us a {font-size: 18px;}
 }
 
 .logo{
     width: 150px;
     cursor: pointer;
     margin: 10px;
+    border-radius: 7px;
+    border: 3px solid black;
 }
 
 .text-box{
     color: #000;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 3%;
     display: grid;
     place-items: center;
 }
@@ -83,6 +135,7 @@ nav ul li a :hover::after{
 .text-box h3{
     font-size: 50px;
     font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .text-box h1{
@@ -94,9 +147,7 @@ nav ul li a :hover::after{
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: normal;
-    animation: 
-        typing 6s steps(50, end) forwards;
-        blink-caret .75s step-end infinite;
+    animation: typing 4.5s steps(50, end) forwards;
     width: 0;
 }
 
@@ -120,11 +171,29 @@ input[type=text], input[type=password], input[type=email] ,input[type=date]{
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
 button {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgb(138, 169, 215);
+  color: black;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 3px solid #201755;
+  cursor: pointer;
+  text-decoration: none;
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: large;
+} 
+
+#logSign{
     text-align: center;
     align-items: center;
     align-content: center;
+    text-decoration: none;
     background-color: rgb(138, 169, 215);
     color: black;
     padding: 10px 12px;
@@ -132,9 +201,22 @@ button {
     border: 3px solid #201755;
     cursor: pointer;
     width: 20%;
+    height: 60px;
     border-radius: 10px;
-    font-weight: bold;
-    font-size: larger;
+    font-weight: bolder;
+    font-size: x-large;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
 }
 
 button:hover {
@@ -164,8 +246,8 @@ button:hover {
 }
 
 img.avatar {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
 }
 
@@ -187,7 +269,7 @@ span.psw {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   padding-top: 60px;
@@ -196,7 +278,7 @@ span.psw {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 1% auto 10% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
 }
@@ -242,4 +324,16 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+}
+
+.psw{
+  margin-right: 202px;
+}
+
+#rem-me{
+  margin-left: 80px;
+}
+
+.cancelbtn{
+  margin-left: 110px;
 }

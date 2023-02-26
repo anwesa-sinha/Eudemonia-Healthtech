@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eudemonia</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 </head>
@@ -13,20 +13,31 @@
         <nav>
             <img src="logo.jpeg" class="logo">
              <ul>
-                <li><a href="page1.html">go to page 1</a></li>
-                <li><a href="dash.html">go to dash page</a></li>
+                <li><span id="abt" style="font-size:30px;cursor:pointer" onclick="openAbt()"> About Us</span></li>
              </ul>
+             <div id="abt-main" class="abt-us">
+              <a href="javascript:void(0)" class="cls-btn" onclick="closeAbt()">&times;</a>
+              <p style="font-family: cursive;"font-size:30px">Mental health includes our emotional,psychological and social well-being.
+                Thus, it affects how we think, feel and act.
+                In these days of excessive stress, people often avoid prioritizing their mental health, causing them to get affected mentally and physically with health ailments.
+                We as a team thus have proposed to make this website to prioritize the mental health of users by taking a small quiz about what they feel and perceive about themselves and their surroundings to help them get over their mental ailments they are facing.
+               <br>
+               <br>
+               <br>
+                So this is the website which makes you think about yourself and prioritize "YOU"!</p>
+            </div>
+            
         </nav>
         <div class="text-box">
             <div class="heading"><h1>Eudemonia</h1></div>
             <h3>All about you.</h3>
-            <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+            <button id="logSign" onclick="document.getElementById('id01').style.display='block'">Login</button>
             <div id="id01" class="modal">
                 <span onclick="document.getElementById('id01').style.display='none'"
               class="close" title="Close Modal">&times;</span>
               
                 <!-- Modal Content -->
-                <form class="modal-content animate" action="/action_page.php">
+                <form class="modal-content animate" action="login.php" method="POST">
                   <div class="imgcontainer">
                     <img src="avatar.jpg" alt="Avatar" class="avatar">
                   </div>
@@ -39,9 +50,9 @@
                     <input type="email" placeholder="Enter email" name="mail" required><br><br>
               
                     <label for="gender"><b>Gender</b></label><br>
-                    <input type="radio" value = "Male" name="gender" required>Male<br>
-                    <input type="radio" value = "Female" name="gender" required>Female<br>
-                    <input type="radio" value = "Transgender" name="gender" required>Transgender<br>
+                    <input type="radio" value = "Male" name="gender" required>Male
+                    <input type="radio" value = "Female" name="gender" required>Female
+                    <input type="radio" value = "Transgender" name="gender" required>Transgender
                     <input type="radio" value = "Prefer_not_to_say" name="gender" required>Prefer not to say<br><br>
               
                     <label for="dob"><b>Date of Birth</b></label>
@@ -50,9 +61,9 @@
                     <label for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw" required><br>
               
-                    <button type="submit">Login</button>
+                    <button type="submit"><a href="page1.html">Submit</a></button>
                     <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                      <input type="checkbox" checked="checked" name="remember" id="rem-me"> Remember me
                     </label>
                   </div>
               

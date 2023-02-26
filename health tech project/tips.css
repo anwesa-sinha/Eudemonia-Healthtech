@@ -7,10 +7,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
-    background-image: linear-gradient(315deg, rgb(237, 209, 171) 30%, rgb(134, 225, 207) 70%);
+
+body {
     overflow: hidden;
+    background-image: linear-gradient(315deg, rgb(148, 154, 239) 0%, rgb(246, 216, 185) 100%);
 }
+
 .topnav {
     background-color:rgb(158, 248, 158);
     overflow: hidden;
@@ -54,42 +56,23 @@ body{
 
 h1{
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    font-size: 60px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 40px;
     font-style: italic;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.diary1 {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .diary1:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 30px 26px;
-    text-align: center;
-  }
-  .diary1{
-    width: 300px;
-    border: 3px solid black;
-  }
-  .row {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+
+ul h3{
+    padding-left: 100px;
+    text-align: left;
 }
 
-.row img{
-    height: 120px;
-    width: 295px;
+h3{
+    padding-left: 100px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 }
